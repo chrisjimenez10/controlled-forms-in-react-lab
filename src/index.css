@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+* {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: lighter;
+  --box-shadow: 2px 2px 1px black;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -25,10 +33,14 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 100vw;
   min-height: 100vh;
+  background-color: hsla(49, 100%, 84%, 1);
 }
+
 
 h1 {
   font-size: 3.2em;
@@ -45,13 +57,71 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  margin-top: 7px;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: black;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+input {
+  padding: 5px;
+}
+
+.bookshelfDiv {
+  padding: 10px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formDiv {
+  width: 60%;
+  border: 1px solid black;
+  box-shadow: var(--box-shadow);
+  border-top-left-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4b5JTDtXD6YL3dAnBY1aPngP3Tq5ah7RRVQ&s");
+  color: white;
+}
+
+.bookCardsDiv {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 90%;
+  margin-top: 20px;
+}
+
+
+.bookCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid white;
+  padding: 5px;
+  width: 40%;
+  margin: 15px 10px;
+  background-color: white;
+  border-top-left-radius: 30px;
+  box-shadow: var(--box-shadow);
+  color: black;
 }
 
 @media (prefers-color-scheme: light) {
